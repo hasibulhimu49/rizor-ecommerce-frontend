@@ -23,6 +23,7 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 
+import logo from "../../../assets/logo.png"
 const navigation = {
   categories: [
     {
@@ -82,7 +83,9 @@ const navigation = {
             { name: "My Way", href: "#" },
             { name: "Re-Arranged", href: "#" },
             { name: "Counterfeit", href: "#" },
-            { name: "Significant Other", href: "#" },
+            { name: "Rizor", href: "#" },
+            { name: "Artisan", href: "#" },
+            { name: "Rise", href: "#" },
           ],
         },
       ],
@@ -152,6 +155,7 @@ const navigation = {
     { name: "Stores", href: "#" },
   ],
 };
+
 
 const Navigation = () => {
   const [open, setOpen] = useState(false);
@@ -269,7 +273,7 @@ const Navigation = () => {
               ))}
             </div>
 
-            <div className="space-y-6 border-t border-gray-200 px-4 py-6">
+            {/* <div className="space-y-6 border-t border-gray-200 px-4 py-6">
               <div className="flow-root">
                 <a
                   href="#"
@@ -286,7 +290,7 @@ const Navigation = () => {
                   Create account
                 </a>
               </div>
-            </div>
+            </div> */}
 
             <div className="border-t border-gray-200 px-4 py-6">
               <a href="#" className="-m-2 flex items-center p-2">
@@ -331,8 +335,8 @@ const Navigation = () => {
                 <a href="#">
                   <span className="sr-only">Your Company</span>
                   <img
-                    alt=""
-                    src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
+                    alt="Rizor"
+                    src={logo}
                     className="h-8 w-auto"
                   />
                 </a>
@@ -461,10 +465,10 @@ const Navigation = () => {
                   >
                     <img
                       alt=""
-                      src="https://tailwindcss.com/plus-assets/img/flags/flag-canada.svg"
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Flag_of_Bangladesh.svg/1280px-Flag_of_Bangladesh.svg.png?_=20251214051007"
                       className="block h-auto w-5 shrink-0"
                     />
-                    <span className="ml-3 block text-sm font-medium">CAD</span>
+                    <span className="ml-3 block text-sm font-medium">BDT</span>
                     <span className="sr-only">, change currency</span>
                   </a>
                 </div>

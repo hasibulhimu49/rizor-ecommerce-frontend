@@ -8,10 +8,10 @@ const App=()=> {
     <div>
       <Navigation/>
       <div>
-        {/* <HomePages/> */}
-        <h1>Hello</h1>
+        <HomePages/>
       </div>
       <Footer/>
+      
     </div>
   )
 }
