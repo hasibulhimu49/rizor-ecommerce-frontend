@@ -273,7 +273,7 @@ const Navigation = () => {
               ))}
             </div>
 
-            {/* <div className="space-y-6 border-t border-gray-200 px-4 py-6">
+            <div className="space-y-6 border-t border-gray-200 px-4 py-6">
               <div className="flow-root">
                 <a
                   href="#"
@@ -290,7 +290,7 @@ const Navigation = () => {
                   Create account
                 </a>
               </div>
-            </div> */}
+            </div>
 
             <div className="border-t border-gray-200 px-4 py-6">
               <a href="#" className="-m-2 flex items-center p-2">

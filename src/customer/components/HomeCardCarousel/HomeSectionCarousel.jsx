@@ -8,7 +8,7 @@ import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import { mens_kurta } from "../../../data/Men/men_kurta";
 
-console.log(typeof AliceCarousel.default);
+// console.log(typeof AliceCarousel.default);
 
 const HomeSectionCarosoul = ({props,sectionName}) => {
 
