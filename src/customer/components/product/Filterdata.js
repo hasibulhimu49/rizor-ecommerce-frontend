@@ -21,12 +21,12 @@ export const filters = [
     id: "size",
     name: "Size",
     options: [
-      { value: "2l", label: "2L", checked: false },
-      { value: "6l", label: "6L", checked: false },
-      { value: "12l", label: "12L", checked: false },
-      { value: "18l", label: "18L", checked: false },
-      { value: "20l", label: "20L", checked: false },
-      { value: "40l", label: "40L", checked: true },
+      { value: "S", label: "S", checked: false },
+      { value: "M", label: "M", checked: false },
+      { value: "L", label: "L", checked: false },
+      { value: "XL", label: "XL", checked: false },
+      { value: "XXL", label: "XXL", checked: false },
+      { value: "XXXL", label: "XXXL", checked: true },
     ],
   },
 ];

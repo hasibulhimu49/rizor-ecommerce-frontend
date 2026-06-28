@@ -2,8 +2,7 @@ import React from 'react'
 
 const HomeSectionCard = ({props}) => {
   return (
-    <div className='cursor-pointer flex flex-col items-center bg-white rounded-lg shadow-lg overflow-hidden w-60 mx-3'>
-
+    <div className='cursor-pointer flex flex-col items-center bg-white rounded-lg shadow-lg overflow-hidden w-60 mx-3 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl'>
       <div className='h-56  w-54'>
         <img className='object-cover object-top w-full h-full' src={props.imageUrl}/>
       </div>
