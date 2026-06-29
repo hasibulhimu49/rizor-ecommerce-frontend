@@ -6,6 +6,7 @@ import ProductCard from './customer/components/product/ProductCard';
 import Product from './customer/components/product/Product';
 import ProductDetails from "./customer/components/productDetails/ProductDetails"
 import Cart from './customer/components/cart/Cart';
+import Checkout from './customer/components/checkout/Checkout';
 
 const App=()=> {
   return (
@@ -15,7 +16,8 @@ const App=()=> {
         {/* <HomePages/> */}
         {/* <Product/> */}
         {/* <ProductDetails/> */}
-        <Cart/>
+        {/* <Cart/> */}
+        <Checkout/>
       </div>
       <Footer/>
       
