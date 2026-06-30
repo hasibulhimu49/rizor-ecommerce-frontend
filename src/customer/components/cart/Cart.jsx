@@ -2,8 +2,13 @@ import React from "react";
 import CartItem from "./CartItem";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBangladeshiTakaSign } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
+const navigate=useNavigate();
+const handleCheckout=()=>{
+  navigate("/checkout?step=1")
+}
   return (
     <div className="bg-gray-100 min-h-screen py-8">
       <div className="max-w-7xl mx-auto px-4">
@@ -76,7 +81,9 @@ const Cart = () => {
                 170 on this order.
               </p>
 
-              <button className="w-full bg-orange-500 hover:bg-orange-600 transition duration-300 text-white font-semibold py-3 rounded-md shadow-md">
+              <button
+              onClick={handleCheckout}
+               className="w-full bg-orange-500 hover:bg-orange-600 transition duration-300 text-white font-semibold py-3 rounded-md shadow-md">
                 Proceed to Checkout
               </button>
             </div>

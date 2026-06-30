@@ -7,6 +7,7 @@ import LinearProgress, {
 import ProductSimilerCard from "./ProductSimilerCard";
 import { mens_kurta } from "../../../data/Men/men_kurta";
 import HomeSectionCard from "../HomeCardCarousel/HomeSectionCard";
+import { useNavigate } from "react-router-dom";
 
 const product = {
   name: "Basic Tee 6-Pack",
@@ -83,6 +84,12 @@ const ratings = [
 ];
 
 export default function ProductDetails() {
+  
+  const navigate = useNavigate();
+  const handleAddToCart = () => {
+    navigate("/cart");
+  };
+
   return (
     <div className="bg-white">
       <div className="pt-6">
@@ -224,6 +231,7 @@ export default function ProductDetails() {
               {/* Buttons */}
               <div className="mt-8 space-y-3">
                 <button
+                  onClick={handleAddToCart}
                   type="submit"
                   className="w-full rounded-lg bg-indigo-600 py-3 text-base font-semibold text-white transition hover:bg-indigo-700 active:scale-95"
                 >
@@ -286,10 +294,9 @@ export default function ProductDetails() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 justify-between border border-indigo-100 w-full rounded-sm ">
             <div>
-              {
-                [1,1,,3,4].map(()=>(<ProductReviewCard />))
-              }
- 
+              {[1, 1, , 3, 4].map(() => (
+                <ProductReviewCard />
+              ))}
             </div>
 
             <div className="pl-20 mt-2">
@@ -318,20 +325,19 @@ export default function ProductDetails() {
         </section>
 
         {/* Similer Products */}
-        <section  >
+        <section>
           <div className="ml-9 text-xl pb-2">
             <h1 className="font-bold">Similer Products</h1>
           </div>
           <div className="flex flex-row flex-wrap justify-center py-5 space-y-7">
-          {
+            {
               // [1,1,1,1,1,1,1,1,1,1,1].map((item)=>(<ProductSimilerCard/>))
-              mens_kurta.map((item)=>(<HomeSectionCard props={item} />))
+              mens_kurta.map((item) => (
+                <HomeSectionCard props={item} />
+              ))
             }
           </div>
-  
         </section>
-
-
       </div>
     </div>
   );

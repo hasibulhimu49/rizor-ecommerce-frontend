@@ -1,8 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const OrderCard = () => {
+  const navigate=useNavigate();
   return (
-    <div className="w-full bg-white rounded-lg shadow-md border border-gray-200 p-5 my-5">
+    <div onClick={()=>navigate(`/account/order/${5}`)} className="w-full bg-white rounded-lg shadow-md border border-gray-200 p-5 my-5">
       <div className="flex items-center justify-between">
 
         {/* Product Info */}

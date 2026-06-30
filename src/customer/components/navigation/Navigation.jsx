@@ -1,5 +1,5 @@
 import React from "react";
- ("use client");
+("use client");
 
 import { Fragment, useState } from "react";
 import {
@@ -23,7 +23,8 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 
-import logo from "../../../assets/logo.png"
+import logo from "../../../assets/logo.png";
+import { useNavigate } from "react-router-dom";
 const navigation = {
   categories: [
     {
@@ -156,14 +157,16 @@ const navigation = {
   ],
 };
 
-
 const Navigation = () => {
-  const [open, setOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+const [profileOpen, setProfileOpen] = useState(false);
+const navigate = useNavigate();
+
 
   return (
     <div className="bg-white">
       {/* Mobile menu */}
-      <Dialog open={open} onClose={setOpen} className="relative z-40 lg:hidden">
+      <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="relative z-40 lg:hidden">
         <DialogBackdrop
           transition
           className="fixed inset-0 bg-black/25 transition-opacity duration-300 ease-linear data-closed:opacity-0"
@@ -176,7 +179,7 @@ const Navigation = () => {
             <div className="flex px-4 pt-5 pb-2">
               <button
                 type="button"
-                onClick={() => setOpen(false)}
+                onClick={() => setMobileMenuOpen(false)}
                 className="relative -m-2 inline-flex items-center justify-center rounded-md p-2 text-gray-400"
               >
                 <span className="absolute -inset-0.5" />
@@ -273,7 +276,7 @@ const Navigation = () => {
               ))}
             </div>
 
-            <div className="space-y-6 border-t border-gray-200 px-4 py-6">
+            {/* <div className="space-y-6 border-t border-gray-200 px-4 py-6">
               <div className="flow-root">
                 <a
                   href="#"
@@ -290,9 +293,9 @@ const Navigation = () => {
                   Create account
                 </a>
               </div>
-            </div>
+            </div> */}
 
-            <div className="border-t border-gray-200 px-4 py-6">
+            {/* <div className="border-t border-gray-200 px-4 py-6">
               <a href="#" className="-m-2 flex items-center p-2">
                 <img
                   alt=""
@@ -304,7 +307,7 @@ const Navigation = () => {
                 </span>
                 <span className="sr-only">, change currency</span>
               </a>
-            </div>
+            </div> */}
           </DialogPanel>
         </div>
       </Dialog>
@@ -322,7 +325,7 @@ const Navigation = () => {
             <div className="flex h-16 items-center">
               <button
                 type="button"
-                onClick={() => setOpen(true)}
+                onClick={() => setMobileMenuOpen(true)}
                 className="relative rounded-md bg-white p-2 text-gray-400 lg:hidden"
               >
                 <span className="absolute -inset-0.5" />
@@ -337,7 +340,7 @@ const Navigation = () => {
                   <img
                     alt="Rizor"
                     src={logo}
-                    className="h-8 w-auto"
+                    className="h-8 w-auto rounded-sm"
                   />
                 </a>
               </div>
@@ -442,7 +445,7 @@ const Navigation = () => {
               </PopoverGroup>
 
               <div className="ml-auto flex items-center">
-                <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
+                {/* <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
                   <a
                     href="#"
                     className="text-sm font-medium text-gray-700 hover:text-gray-800"
@@ -456,8 +459,8 @@ const Navigation = () => {
                   >
                     Create account
                   </a>
-                </div>
-
+                </div> */}
+                {/* 
                 <div className="hidden lg:ml-8 lg:flex">
                   <a
                     href="#"
@@ -471,8 +474,38 @@ const Navigation = () => {
                     <span className="ml-3 block text-sm font-medium">BDT</span>
                     <span className="sr-only">, change currency</span>
                   </a>
+                </div> */}
+
+
+                {/* Logo navigate */}
+                <div className="relative">
+                  <div
+                    onClick={() => setProfileOpen(!profileOpen)}
+                    className="h-8 w-8 bg-blue-600 rounded-full flex justify-center items-center cursor-pointer"
+                  >
+                    <h1 className="font-bold text-white">H</h1>
+                  </div>
+
+                  {profileOpen && (
+                    <div className="absolute right-0 mt-2 w-44 bg-white rounded-lg shadow-lg border border-gray-200 z-50 overflow-hidden">
+                      <button className="w-full text-left px-4 py-3 hover:bg-gray-100">
+                        Profile
+                      </button>
+
+                      <button
+                      onClick={()=>navigate("account/order")}
+                       className="w-full text-left px-4 py-3 hover:bg-gray-100">
+                        My Orders
+                      </button>
+
+                      <button className="w-full text-left px-4 py-3 text-red-600 hover:bg-red-50">
+                        Logout
+                      </button>
+                    </div>
+                  )}
                 </div>
 
+                
                 {/* Search */}
                 <div className="flex lg:ml-6">
                   <a href="#" className="p-2 text-gray-400 hover:text-gray-500">
@@ -483,7 +516,6 @@ const Navigation = () => {
                     />
                   </a>
                 </div>
-
                 {/* Cart */}
                 <div className="ml-4 flow-root lg:ml-6">
                   <a href="#" className="group -m-2 flex items-center p-2">
