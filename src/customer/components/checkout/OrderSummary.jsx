@@ -1,8 +1,17 @@
 import React from 'react'
+import AddressCart from './AddressCart'
+import Cart from '../cart/Cart'
 
 const OrderSummary = () => {
   return (
-    <div>OrderSummary</div>
+    <div>
+      <div>
+        <AddressCart/>
+      </div>
+      <div>
+        <Cart/>
+      </div>
+    </div>
   )
 }
 
