@@ -1,9 +1,9 @@
 import React from "react";
 
-const AddressCart = () => {
+const AddressCart = ({title}) => {
   return (
     <div className="p-6 border-b border-gray-200">
-      <h2 className="text-xl font-bold mb-4">Saved Address</h2>
+      <h2 className="text-xl font-bold mb-4">{title}</h2>
 
       <div className="border border-gray-200 rounded-lg p-4 hover:border-blue-500 cursor-pointer transition">
         <h3 className="font-semibold text-lg">Mohammad Hasibul Hasan</h3>

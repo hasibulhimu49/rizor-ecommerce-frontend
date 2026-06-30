@@ -36,7 +36,7 @@ console.log(activeStep);
 
   return (
     <div>
-    <div className="px-10 shadow-lg mx-25 my-5 rounded-md border-gray-50 ">
+    <div className="px-10 shadow-lg mx-6 my-5 rounded-md border-gray-50 ">
         <Box sx={{ width: "100%" }}>
           <Stepper activeStep={activeStep}>
             {steps.map((label, index) => {

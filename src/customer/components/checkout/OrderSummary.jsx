@@ -6,7 +6,7 @@ const OrderSummary = () => {
   return (
     <div>
       <div>
-        <AddressCart/>
+        <AddressCart title={"Saved Address"}/>
       </div>
       <div>
         <Cart/>
